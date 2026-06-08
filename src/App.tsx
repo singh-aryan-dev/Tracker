@@ -1,3 +1,28 @@
+import { Button } from "./components/Button"
+
 export default function App() {
-  return <h1>Tracker</h1>
+  return (
+    <div className="max-w-2xl mx-auto p-4 flex flex-col gap-4">
+        <Header></Header>
+    </div>
+  )
+}
+
+function Header() {
+  return (
+    <header className="flex items-center justify-center">
+      <div className="flex flex-col gap-1">
+        <h1 className="text-3xl font-bold">Tracker</h1>
+        <span className="text-zinc-400 text-sm">1/1</span>
+      </div>
+
+      <div className="flex flex-col gap-1">
+        <span className="text-zinc-400 text-sm">May 9 - May 14</span>
+        <div className="flex items-center gap-3">
+          <Button text="Prev"></Button>
+          <Button text="Next"></Button>
+        </div>
+      </div>
+    </header>
+  )
 }
