@@ -1,12 +1,8 @@
-import type { ReactNode } from "react";
 
-type ItemProps = {
-    habit : ReactNode;
-}
 export default function List(){
 
     const habits = [
-        {id:1, name:"Habit1"}
+        {id:"1", name:"Habit1"}
     ]
 
     if(habits.length === 0) {
@@ -24,6 +20,10 @@ export default function List(){
 
 }
 
+type ItemProps = {
+    habit : {id:string; name: string};
+}
+
 function Item({habit }:ItemProps) {
-    return <h1>{habit}</h1>
+    return <h1>{habit.name}</h1>
 }
